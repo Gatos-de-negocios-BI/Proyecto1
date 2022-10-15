@@ -152,3 +152,5 @@ cython_debug/
 #.idea/
 data/DatosSuicidio.zip
 data/SuicidiosProyecto.csv
+sentiment-analysis.ipynb
+sentiment-analysis-multiclass.ipynb
