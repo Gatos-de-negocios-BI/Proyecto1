@@ -48,7 +48,7 @@ def make_prediction(dataModel: List[DataModel.DataModel]):
     results = prediction_model.make_prediction(df)
     return results.tolist()
 
-@app.post("/")
+@app.post("/postpublicacion")
 def create_publicacion(publicacion: CreatePublicacion, db: Session = Depends(get_db)):
     classificationgot = prediction_model.make_prediction(pd.DataFrame([publicacion.text], columns=["text"]))
     dateActual = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
