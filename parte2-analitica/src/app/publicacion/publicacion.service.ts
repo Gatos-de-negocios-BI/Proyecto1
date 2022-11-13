@@ -19,4 +19,8 @@ export class PublicacionService {
     return this.http.get<Publicacion[]>(this.apiUrl + 'lastpublic');
   }
 
+  predictText(text: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl + 'predict', [{ "text": text }]);
+  }
+
 }

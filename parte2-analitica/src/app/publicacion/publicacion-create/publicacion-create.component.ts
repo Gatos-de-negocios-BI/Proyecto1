@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PublicacionService } from '../publicacion.service';
 
 @Component({
   selector: 'app-publicacion-create',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicacionCreateComponent implements OnInit {
 
-  constructor() { }
+  prediction: string = 'non-suicide';
+  constructor(private publicacionService: PublicacionService) {  }
 
   ngOnInit() {
+  }
+
+  getPrediction(text: string): void {
+    this.publicacionService.predictText(text).subscribe((prediction) => {
+      this.prediction = prediction;
+      console.log(prediction);
+    });
   }
 
 }
