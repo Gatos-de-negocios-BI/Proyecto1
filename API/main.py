@@ -11,8 +11,8 @@ from typing import List
 import pandas as pd
 from fastapi import FastAPI
 
-from DataModel import DataModel, DataModelComplete
-from PredictionModel import PredictionModel
+from DataModel import DataModel
+from prediction_model import PredictionModel
 
 app = FastAPI()
 
