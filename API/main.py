@@ -75,5 +75,5 @@ def show_publis(db: Session = Depends(get_db)):
 
 @app.get("/lastpublic", response_model = List[DataModel.Publicacion])
 def show_last_public(db: Session = Depends(get_db)):
-    publics = db.query(Publicacion).all()
-    return publics[0:40]
+    publics = db.query(Publicacion).filter(Publicacion.id < 60).all()
+    return publics
