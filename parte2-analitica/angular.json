@@ -114,5 +114,8 @@
       }
     }
   },
-  "defaultProject": "parte2-analitica"
+  "defaultProject": "parte2-analitica",
+  "cli": {
+    "analytics": "4b53d112-2fab-4821-8eaa-ba8cfae7a4d3"
+  }
 }
