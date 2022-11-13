@@ -159,3 +159,4 @@ data/x_test_bow.pkl
 data/x_train_bow.pkl
 data/x_test_tfidf.pkl
 data/x_train_tfidf.pkl
+SuicidiosLimpios.csv
