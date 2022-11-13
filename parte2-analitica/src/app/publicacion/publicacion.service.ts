@@ -10,13 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class PublicacionService {
 
-  private apiUrl: string = environment.baseUrl + 'publicaciones';
+  private apiUrl: string = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
-  getPublicaciones(): Publicacion[] {
+  getPublicaciones(): Observable<Publicacion[]> {
 
-    return [new Publicacion(1, 'Hola', '11-09-2002', 'non-suicide', 'Trash')]
+    return this.http.get<Publicacion[]>(this.apiUrl + 'lastpublic');
   }
 
 }

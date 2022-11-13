@@ -2,7 +2,7 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const baseUrl = 'http://localhost:8080/'; // <-- Add your baseUrl here
+const baseUrl = 'http://127.0.0.1:8000/';
 export const environment = {
   production: false,
   baseUrl
