@@ -58,7 +58,6 @@ def create_publicacion(publicacion: CreatePublicacion, db: Session = Depends(get
         classificationgot = "non-suicide"
 
     to_create = Publicacion(
-        id=4000000,
         text=publicacion.text,
         date=dateActual,
         classification=classificationgot,
