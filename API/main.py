@@ -61,3 +61,8 @@ def create_publicacion(publicacion: CreatePublicacion, db: Session = Depends(get
 def show_publis(db: Session = Depends(get_db)):
     publis = db.query(Publicacion).all()
     return publis
+
+@app.get("/lastpublic", response_model = List[DataModel.Publicacion])
+def show_last_public(db: Session = Depends(get_db)):
+    publics = db.query(Publicacion).all()
+    return publics[0:40]
