@@ -13,23 +13,39 @@
               </div>
 
             </form>
-            <button class="btn btn-secondary" (click)="getPrediction(textAreaInput.value, content)">Publicar</button>
+            <button class="btn btn-secondary" (click)="getPrediction(textAreaInput.value, content, content1)">Publicar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<ng-template #content let-c="close" let-d="dismiss">
+<ng-template #content1 let-c="close" let-d="dismiss">
 	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+		<h4 class="modal-title" id="modal-basic-title">Publicación creada</h4>
 		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
 	</div>
 	<div class="modal-body">
-		<p>Hello, World!</p>
+		<p>Hemos subido tu publicacion!</p>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+		<a type="button" class="btn btn-outline-dark" (click)="c('Save click')" href="/">OK</a>
+	</div>
+</ng-template>
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Ayuda y apoyo están disponibles siempre que necesites</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<p>Si sientes que necesitas ayuda, es importante contarle a alguien. No tienes que luchar contra sentimientos dificiles solo.</p>
+    <h5>Lineas de ayuda</h5>
+    <p>Estas lineas de ayuda gratis están para ayudarte cuando te estás sintiendo desesperado. Están abiertas 24 horas al día, todos los días.</p>
+    <p>116 123 - Samaritans for everyone</p>
+    <p>0800 58 58 58 - Campaign Against Living Miserably (CALM)</p>
+	</div>
+	<div class="modal-footer">
+		<a type="button" class="btn btn-outline-dark" (click)="c('Save click')" href="/">OK</a>
 	</div>
 </ng-template>
 

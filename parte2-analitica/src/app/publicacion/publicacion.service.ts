@@ -23,4 +23,8 @@ export class PublicacionService {
     return this.http.post<any>(this.apiUrl + 'predict', [{ "text": text }]);
   }
 
+  postPublicacion(publicacion: any): Observable<Publicacion> {
+    return this.http.post<any>(this.apiUrl + 'postpublicacion', publicacion);
+  }
+
 }
